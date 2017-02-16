@@ -192,7 +192,7 @@ div.error-pg {
 /*
 * Media queries
 */
-@media (max-width: 880px) {
+@media (max-width: 896px) {
   /* line 161, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
@@ -231,6 +231,12 @@ div.error-pg {
   }
 
   /* line 190, ../sass/style.scss */
+  nav.cat a {
+    display: block;
+  }
+}
+@media (max-width: 1320px) {
+  /* line 197, ../sass/style.scss */
   nav.cat a {
     display: block;
   }

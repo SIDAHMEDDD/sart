@@ -157,7 +157,7 @@ div.error-pg{
 * Media queries
 */
 
-@media (max-width:880px){
+@media (max-width:896px){
   a.m-item{
     visibility: hidden;
     display: none;
@@ -186,6 +186,13 @@ div.error-pg{
       visibility: visible;
     }
   }
+  nav.cat{
+    a{
+      display: block;
+    }
+  }
+}
+@media (max-width:1320px){
   nav.cat{
     a{
       display: block;
