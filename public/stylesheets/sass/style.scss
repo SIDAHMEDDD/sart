@@ -31,6 +31,9 @@ nav.main{
     margin-top: -20px;
     margin-right: 10px;
   }
+  a.nvb-collapse{
+    visibility: hidden;
+  }
 }
 nav.cat{
   background-color: #34495e;
@@ -157,10 +160,14 @@ div.error-pg{
 @media (max-width:880px){
   a.m-item{
     visibility: hidden;
+    display: none;
   }
   nav.main{
     padding-top: 20px;
     padding-bottom: 20px;
+    a.nvb-collapse{
+      visibility: visible;
+    }
   }
   nav.cat{
     a{
@@ -175,6 +182,9 @@ div.error-pg{
   nav.main{
     padding-top: 20px;
     padding-bottom: 5px;
+    a.nvb-collapse{
+      visibility: visible;
+    }
   }
   nav.cat{
     a{
