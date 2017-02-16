@@ -1,0 +1,51 @@
+@import 'compass/css3';
+
+body{
+  background-color: #ecf0f1;
+  margin: auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+form.login{
+  display: inline-block;
+  text-align: center;
+  background-color: #3498db;
+  margin-top: 10%;
+  padding: 50px 20px 50px 20px;
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin-right: 10px;
+  }
+  img{
+    width: 10%;
+    display: block;
+  }
+  input{
+    background-color: #ecf0f1;
+    display: block;
+    padding: 8px 10px 8px 5px;
+    border: none;
+    margin-bottom: 5px;
+  }
+  button{
+    color: white;
+    background-color: #2980b9;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #2c3e50;
+    padding: 10px 73px 10px 73px;
+    margin-bottom: 20px;
+    @include transition-duration(0.5s);
+    &:hover{
+      cursor: pointer;
+      background-color: #2c3e50;
+      @include transition-duration(0.5s);
+    }
+  }
+  i{
+    color: white;
+    margin-bottom: 50px;
+  }
+}
