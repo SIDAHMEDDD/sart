@@ -63,7 +63,7 @@ form.login i {
   margin-bottom: 50px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   /* line 54, ../sass/login.scss */
   form.login button {
     padding: 13px 78px 10px 78px;
