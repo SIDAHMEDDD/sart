@@ -41,7 +41,7 @@ form.login button {
   display: block;
   border: none;
   border-bottom: 2px solid #2c3e50;
-  padding: 10px 74px 10px 74px;
+  padding: 13px 74px 10px 73px;
   margin-bottom: 20px;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
@@ -61,4 +61,11 @@ form.login button:hover {
 form.login i {
   color: white;
   margin-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+  /* line 54, ../sass/login.scss */
+  form.login button {
+    padding: 13px 74px 10px 74px;
+  }
 }
