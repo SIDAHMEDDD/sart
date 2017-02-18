@@ -12,21 +12,27 @@ form.login {
   text-align: center;
   background-color: #3498db;
   margin-top: 10%;
+  margin-bottom: 10%;
   padding: 50px 20px 50px 20px;
 }
-/* line 15, ../sass/login.scss */
+/* line 16, ../sass/login.scss */
 form.login a {
   color: white;
   text-decoration: none;
   font-size: 0.8em;
   margin-right: 10px;
 }
-/* line 21, ../sass/login.scss */
+/* line 22, ../sass/login.scss */
+form.login a.back {
+  display: block;
+  padding-bottom: 20px;
+}
+/* line 26, ../sass/login.scss */
 form.login img {
   width: 10%;
   display: block;
 }
-/* line 25, ../sass/login.scss */
+/* line 30, ../sass/login.scss */
 form.login input {
   background-color: #ecf0f1;
   display: block;
@@ -34,7 +40,7 @@ form.login input {
   border: none;
   margin-bottom: 5px;
 }
-/* line 32, ../sass/login.scss */
+/* line 37, ../sass/login.scss */
 form.login button {
   color: white;
   background-color: #2980b9;
@@ -48,7 +54,7 @@ form.login button {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 41, ../sass/login.scss */
+/* line 46, ../sass/login.scss */
 form.login button:hover {
   cursor: pointer;
   background-color: #2c3e50;
@@ -57,14 +63,14 @@ form.login button:hover {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 47, ../sass/login.scss */
+/* line 52, ../sass/login.scss */
 form.login i {
   color: white;
   margin-bottom: 50px;
 }
 
 @media (max-width: 700px) {
-  /* line 54, ../sass/login.scss */
+  /* line 59, ../sass/login.scss */
   form.login button {
     padding: 13px 78px 10px 78px;
   }

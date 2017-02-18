@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var authentication = require('../lib/userLib.js');
 
-/* GET home page. */
+var isAuthenticated = authentication.ensureAuthenticated;
+
 router.get('/', function(req, res, next){
-  res.render('index', { title: 'SART, big gallery of websites.' });
+    res.render('index', { layout: 'index'});
 });
 router.get('/templates', function(req, res, next){
   res.render('templates', { title: 'Our templates gallery'});
@@ -32,7 +34,5 @@ router.get('/services', function(req,res, next){
 router.get('/about', function(req, res, next){
   res.render('about', { title: 'About'});
 });
-router.get('/login', function(req, res, next){
-  res.render('login', { title: 'Login', layout: 'login'});
-});
+
 module.exports = router;
