@@ -29,7 +29,7 @@ router.get('/templates/bootstrapthemes', function(req, res, next){
   res.render('bootstrap', { title: 'Bootstrap themes'});
 });
 router.get('/services', function(req,res, next){
-  res.render('services', { title: 'Services'});
+  res.render('services', { title: 'Services', active_services: true});
 });
 router.get('/about', function(req, res, next){
   res.render('about', { title: 'About'});

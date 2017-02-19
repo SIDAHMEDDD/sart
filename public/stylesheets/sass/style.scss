@@ -49,13 +49,16 @@ header{
   text-align: center;
   background-color: #19B5FE;
   margin-top: 0;
-  padding: 151px 50px 151px 50px;
+  padding: 125px 50px 125px 50px;
   h1{
     padding-top: 25px;
     padding-bottom: 20px;
     color: white;
   }
-  h5{
+  h4{
+    color: white;
+  }
+  h2{
     color: #E4F1FE;
     margin-bottom: 50px;
   }
@@ -152,6 +155,92 @@ div.error-pg{
   margin-top: 10%;
   margin-left: 10%;
 }
+div.jumbotron{
+  background-color: #ecf0f1;
+  padding: 100px 0 100px 0;
+  text-align: center;
+  h1{
+    color: #7f8c8d;
+  }
+}
+div.pricing-table{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  div.pricing{
+    text-align: center;
+    background-color: #ecf0f1;
+    display: inline-block;
+    padding: 20px 50px 20px 50px;
+    p{
+      color: #7f8c8d;
+
+    }
+    p#last{
+      color: #7f8c8d;
+      margin-bottom: 40px;
+    }
+    h2.price-name{
+      color: #2c3e50;
+    }
+    h3.price{
+      color: white;
+      background-color: #34495e;
+      border-radius: 50%;
+    }
+    h3.basic{
+      color: #c0392b;
+      background-color: transparent;
+      border: 3px solid #c0392b;
+      padding: 40px 10px 40px 10px;
+    }
+    h3.plus{
+      color: white;
+      background-color: #2980b9;
+      border: 3px solid #2980b9;
+      padding: 40px 10px 40px 10px;
+    }
+    h3.business{
+      color: #16a085;
+      background-color: transparent;
+      padding: 40px 0px 40px 0px;
+      border: 3px solid #16a085;
+    }
+    a.basic{
+      background-color: #c0392b;
+      color: white;
+      text-decoration: none;
+      padding: 10px 30px 10px 30px;
+      border-radius: 20px;
+      &:hover{
+        background-color: #e74c3c;
+      }
+    }
+    a.plus{
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      padding: 10px 30px 10px 30px;
+      border-radius: 20px;
+      &:hover{
+        background-color: #3498db;
+      }
+    }
+    a.business{
+      background-color: #16a085;
+      color: white;
+      text-decoration: none;
+      padding: 10px 30px 10px 30px;
+      border-radius: 20px;
+      &:hover{
+        background-color: #1abc9c;
+      }
+    }
+  }
+  div.plus{
+    @include box-shadow(0 5px 5px rgba(0,0,0,0.12), 0 5px 5px rgba(0,0,0,0.24));
+  }
+}
 
 /*
 * Media queries
@@ -167,6 +256,9 @@ div.error-pg{
     padding-bottom: 20px;
     a.nvb-collapse{
       visibility: visible;
+      position: absolute;
+      right: 10px;
+      top: 20px;
     }
   }
   nav.cat{
