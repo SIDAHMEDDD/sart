@@ -11,6 +11,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 var User = require('./models/user');
+var Template = require('./models/template');
 var authenticationCheck = require('./lib/userLib.js');
 var index = require('./routes/index');
 var users = require('./routes/users');

@@ -163,6 +163,14 @@ div.jumbotron{
     color: #7f8c8d;
   }
 }
+h2.plans{
+  color: #34495e;
+  text-align: center;
+}
+h3.c-us{
+  color: #34495e;
+  text-align: center;
+}
 div.pricing-table{
   text-align: center;
   margin-top: 50px;
@@ -239,6 +247,67 @@ div.pricing-table{
   }
   div.plus{
     @include box-shadow(0 5px 5px rgba(0,0,0,0.12), 0 5px 5px rgba(0,0,0,0.24));
+  }
+}
+form.contact-us{
+  text-align: center;
+  background-color: #3498db;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  input{
+    background-color: #ecf0f1;
+    display: block;
+    padding: 15px 10px 15px 30px;
+    border: none;
+    width: 49.2%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  textarea{
+    background-color: #ecf0f1;
+    display: block;
+    padding: 15px 10px 15px 30px;
+    width: 49.2%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  button{
+    color: white;
+    background-color: #2980b9;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 86px 10px 86px;
+    margin-bottom: 20px;
+    @include transition-duration(0.5s);
+    &:hover{
+      cursor: pointer;
+      background-color: #3498db;
+      @include transition-duration(0.5s);
+    }
+  }
+}
+div.side{
+  display: inline-block;
+  background-color: #ecf0f1;
+  padding: 20px 20px 150px 20px;
+  margin: 20px 0 20px 20px;
+  border-radius: 10px;
+  h4{
+    color: #2c3e50;
+  }
+}
+div.list{
+  display: inline-block;
+  background-color: #ecf0f1;
+  padding: 16px 20px 150px 20px;
+  margin: 20px 0 20px 20px;
+  width: 75%;
+  border-radius: 10px;
+  h2{
+    color: #2c3e50;
   }
 }
 

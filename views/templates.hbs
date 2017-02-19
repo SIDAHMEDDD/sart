@@ -6,3 +6,14 @@
   <a href="/templates/covers">Facebook/Youtube covers</a>
   <a href="/templates/bootstrapthemes">Bootstrap themes</a>
 </nav>
+<div class="side">
+  <h4>Most downloaded</h4>
+</div>
+<div class="list">
+  <h2>Latest</h2>
+  {{#each templates}}
+  <div class="template">
+    <h1>{{this.name}}</h1>
+  </div>
+  {{/each}}
+</div>

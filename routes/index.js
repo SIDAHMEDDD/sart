@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var authentication = require('../lib/userLib.js');
+var Template = require('../models/template');
 
 var isAuthenticated = authentication.ensureAuthenticated;
 
@@ -8,7 +9,9 @@ router.get('/', function(req, res, next){
     res.render('index', { layout: 'index'});
 });
 router.get('/templates', function(req, res, next){
-  res.render('templates', { title: 'Our templates gallery'});
+  Template.find({}, function(err, docs){
+    res.render('templates', { title: 'Our templates gallery', templates: docs});
+  })
 });
 router.get('/templates/wordpress', function(req, res, next){
   res.render('wordpress', { title: 'Wordpress themes'});
