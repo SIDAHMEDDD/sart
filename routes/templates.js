@@ -39,4 +39,5 @@ router.get('/bootstrapthemes', function(req, res, next){
     res.render('bootstrap', { title: 'Bootstrap themes', class3: 'active', templates: docs});
   })
 });
+
 module.exports = router;

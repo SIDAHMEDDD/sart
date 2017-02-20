@@ -60,4 +60,5 @@ router.get('/layout', authentication.ensureAuthenticated_admin,
               function(req, res){
   res.render('wlayout', { title: 'Layout', class10: 'active', layout: 'dashboard'})
 })
+
 module.exports = router;
