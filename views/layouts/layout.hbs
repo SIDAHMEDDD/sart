@@ -12,7 +12,11 @@
     <nav class="main">
       {{#if user}}
         <a href="/" class="logo">SART</a>
-        <a href="/" class="m-item">Home</a>
+        {{#ifCond user.userType  "Normal"}}
+          <a href="/" class="m-item">Home</a>
+        {{else}}
+          <a href="/dashboard/main" class="m-item">Dashboard</a>
+        {{/ifCond}}
         <a href="/services" class="m-item">Services</a>
         <a href="/templates" class="m-item">Templates</a>
         <a href="/about" class="m-item">About</a>
@@ -23,8 +27,8 @@
         <a href="/services" class="m-item">Services</a>
         <a href="/templates" class="m-item">Templates</a>
         <a href="/about" class="m-item">About</a>
-        <a href="/users/login" class="right m-item">Log in</a>
-        <a href="/users/register" class="right m-item">Sign up</a>
+        <a href="/users/login" class="right m-item lin">Log in</a>
+        <a href="/users/register" class="right m-item lin">Sign up</a>
       {{/if}}
       <a href="#" class="nvb-collapse right"><i class="fa fa-bars" aria-hidden="true"></i></a>
     </nav>

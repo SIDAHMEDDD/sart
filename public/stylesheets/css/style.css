@@ -365,48 +365,162 @@ form.contact-us button:hover {
 }
 
 /* line 292, ../sass/style.scss */
-div.side {
-  display: inline-block;
-  background-color: #ecf0f1;
-  padding: 20px 20px 150px 20px;
-  margin: 20px 0 20px 20px;
-  border-radius: 10px;
-}
-/* line 298, ../sass/style.scss */
-div.side h4 {
-  color: #2c3e50;
-}
-
-/* line 302, ../sass/style.scss */
 div.list {
   display: inline-block;
   background-color: #ecf0f1;
-  padding: 16px 20px 150px 20px;
+  padding: 20px 20px 20px 20px;
   margin: 20px 0 20px 20px;
-  width: 75%;
+  width: 94%;
   border-radius: 10px;
 }
-/* line 309, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 div.list h2 {
   color: #2c3e50;
+}
+
+/* line 303, ../sass/style.scss */
+div.templates {
+  text-align: center;
+  padding-bottom: 50px;
+}
+/* line 306, ../sass/style.scss */
+div.templates div.template {
+  display: inline-block;
+  background-color: #ecf0f1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0 0px 5px 0px;
+}
+/* line 312, ../sass/style.scss */
+div.templates div.template img {
+  width: 288px;
+  height: 400px;
+}
+/* line 316, ../sass/style.scss */
+div.templates div.template a.name {
+  color: #2980b9;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 321, ../sass/style.scss */
+div.templates div.template a.name:hover {
+  color: #3498db;
+}
+/* line 325, ../sass/style.scss */
+div.templates div.template h5 {
+  text-align: left;
+  color: white;
+  background-color: #e74c3c;
+  padding: 10px 10px 10px 10px;
+  margin: 0;
+}
+/* line 332, ../sass/style.scss */
+div.templates div.template h3.rank {
+  color: #2c3e50;
+  margin-bottom: 50px;
+}
+/* line 336, ../sass/style.scss */
+div.templates div.template h3.pricee {
+  color: #2c3e50;
+  margin-top: 40px;
+  display: block;
+}
+/* line 341, ../sass/style.scss */
+div.templates div.template a.dp {
+  color: white;
+  padding: 15px 15px 15px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* line 347, ../sass/style.scss */
+div.templates div.template a.download {
+  background-color: #16a085;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 350, ../sass/style.scss */
+div.templates div.template a.download:hover {
+  background-color: #1abc9c;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 355, ../sass/style.scss */
+div.templates div.template a.preview {
+  background-color: #2980b9;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 358, ../sass/style.scss */
+div.templates div.template a.preview:hover {
+  background-color: #3498db;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+/* line 365, ../sass/style.scss */
+div.about {
+  text-align: center;
+  color: white;
+  background-color: #3498db;
+  margin: 0;
+  padding: 45px 0 45px 0;
+}
+/* line 372, ../sass/style.scss */
+div.about div.developers div.developer {
+  display: inline-block;
+}
+/* line 374, ../sass/style.scss */
+div.about div.developers div.developer img {
+  width: 20%;
+  border-radius: 50%;
+}
+/* line 378, ../sass/style.scss */
+div.about div.developers div.developer hr {
+  color: #2c3e50;
+  background: #2c3e50;
+  border: 0;
+  height: 1px;
+  margin: 1em 0 2em;
+}
+/* line 385, ../sass/style.scss */
+div.about div.developers div.developer a {
+  color: white;
+}
+/* line 387, ../sass/style.scss */
+div.about div.developers div.developer a:hover {
+  color: #ecf0f1;
 }
 
 /*
 * Media queries
 */
 @media (max-width: 896px) {
-  /* line 319, ../sass/style.scss */
+  /* line 400, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
     display: none;
   }
 
-  /* line 323, ../sass/style.scss */
+  /* line 404, ../sass/style.scss */
+  a.logo {
+    margin-top: -20px;
+  }
+
+  /* line 407, ../sass/style.scss */
   nav.main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 326, ../sass/style.scss */
+  /* line 410, ../sass/style.scss */
   nav.main a.nvb-collapse {
     visibility: visible;
     position: absolute;
@@ -414,35 +528,45 @@ div.list h2 {
     top: 20px;
   }
 
-  /* line 334, ../sass/style.scss */
+  /* line 418, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 }
 @media (max-width: 600px) {
-  /* line 340, ../sass/style.scss */
+  /* line 424, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
   }
 
-  /* line 343, ../sass/style.scss */
+  /* line 427, ../sass/style.scss */
+  a.logo {
+    margin-top: -20px;
+  }
+
+  /* line 430, ../sass/style.scss */
   nav.main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 346, ../sass/style.scss */
+  /* line 433, ../sass/style.scss */
   nav.main a.nvb-collapse {
     visibility: visible;
   }
 
-  /* line 351, ../sass/style.scss */
+  /* line 438, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 }
 @media (max-width: 1320px) {
-  /* line 358, ../sass/style.scss */
+  /* line 445, ../sass/style.scss */
   nav.cat a {
     display: block;
+  }
+
+  /* line 449, ../sass/style.scss */
+  a.logo {
+    margin-top: -20px;
   }
 }

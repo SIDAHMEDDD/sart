@@ -6,14 +6,23 @@
   <a href="/templates/covers">Facebook/Youtube covers</a>
   <a href="/templates/bootstrapthemes">Bootstrap themes</a>
 </nav>
-<div class="side">
-  <h4>Most downloaded</h4>
-</div>
 <div class="list">
-  <h2>Latest</h2>
+  <h2>Recently Added Templates And Themes</h2>
+</div>
+<div class="templates">
   {{#each templates}}
-  <div class="template">
-    <h1>{{this.name}}</h1>
-  </div>
+    <div class="template">
+        <h5 class="category">{{this.category}}</h5>
+        <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+        <a class="name" href="">{{this.name}}</a>
+        <h3 class="rank">{{this.downloadRank}} Downloads</h3>
+        <a class="download dp" href={{this.downloadLink}}>View Details</a>
+        {{#ifCond this.price 0}}
+          <a class="preview dp" href={{this.downloadLink}}>Download</a>
+        {{else}}
+          <a class="preview dp" href="#">Add To Cart</a>
+        {{/ifCond}}
+        <h3 class="pricee">{{this.price}}$</h3>
+    </div>
   {{/each}}
 </div>

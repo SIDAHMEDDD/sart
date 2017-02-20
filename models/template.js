@@ -7,6 +7,9 @@ var TemplateSchema = mongoose.Schema({
   category: {
     type: String
   },
+  pictureLink: {
+    type: String
+  },
   downloadRank: {
     type: Number
   },

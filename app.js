@@ -7,6 +7,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var exphbs = require('express-handlebars');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
@@ -16,6 +17,7 @@ var authenticationCheck = require('./lib/userLib.js');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var inside = require('./routes/inside');
+var adminDashboard = require('./routes/adminDashboard');
 
 var app = express();
 
@@ -28,6 +30,12 @@ mongoose.connect('mongodb://sidahmed:11092000@ds151279.mlab.com:51279/sart', fun
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.engine("hbs", exphbs({
+    defaultLayout: "layout",
+    extname: ".hbs",
+    helpers: require("./public/javascripts/helpers.js").helpers, // same file that gets used on our client
+    partialsDir: "views/partials/", // same as default, I just like to be explicit
+}));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
@@ -55,6 +63,7 @@ app.use(function(req, res, next) {
 app.use('/', index);
 app.use('/users', users);
 app.use('/section', inside);
+app.use('/dashboard', adminDashboard);
 
 
 // error handler

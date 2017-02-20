@@ -1,0 +1,133 @@
+@import 'compass/css3';
+
+body{
+  background-color: #ecf0f1 ;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+nav {
+    height: 100%;
+    position: fixed;
+    resize: both;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-right: 0px;
+    padding-left: 0px;
+    h5{
+      color: #bdc3c7;
+      margin-left: 10px;
+    }
+    a{
+      padding: 20px 100px 20px 20px;
+      text-decoration: none;
+      color: #95a5a6;
+      display: block;
+      transition: 0.3s;
+      &:hover{
+        background-color: #ecf0f1;
+      }
+    }
+    a.active{
+      background-color: #ecf0f1;
+      color: #1abc9c;
+      border-left: 3px solid #1abc9c;
+    }
+    a#last{
+      margin-bottom: 100px;
+    }
+    i{
+      margin-right: 10px;
+    }
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
+
+
+/**/
+
+scrollbar {
+    width: 5px;
+}
+
+/* Track */
+scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* Handle */
+scrollbar-thumb {
+    background: #bdc3c7;
+}
+scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
+
+/**/
+
+::-moz-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* Handle */
+::-moz-scrollbar-thumb {
+    background: #bdc3c7;
+}
+::-moz-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
+div.dash-view{
+  text-align: center;
+  margin-top: 50px;
+  div.main{
+    text-align: left;
+    margin-left: 32%;
+    h5{
+      color: #2c3e50;
+    }
+    h3{
+      color: #95a5a6;
+    }
+  }
+}
+@media (max-width:700px){
+  nav{
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-right: 0px;
+    padding-left: 0px;
+    a{
+      padding: 20px 20px 20px 20px;
+      i.text{
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+}
