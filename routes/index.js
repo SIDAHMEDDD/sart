@@ -8,13 +8,13 @@ var isAuthenticated = authentication.ensureAuthenticated;
 
 router.get('/', function(req, res, next){
   var date = dateTime.getDate;
-    res.render('index', { layout: 'index', currentDate: date});
+    res.render('index', { layout: 'index', currentDate: date, class1: 'active',});
 });
 router.get('/services', function(req,res, next){
-  res.render('services', { title: 'Services', active_services: true});
+  res.render('services', { title: 'Services', class2: 'active'});
 });
 router.get('/about', function(req, res, next){
-  res.render('about', { title: 'About'});
+  res.render('about', { title: 'About', class4: 'active'});
 });
 
 module.exports = router;

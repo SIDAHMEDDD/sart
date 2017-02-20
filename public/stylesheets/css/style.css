@@ -512,27 +512,43 @@ nav.warning h4 {
   margin-left: 20px;
 }
 
+/* line 403, ../sass/style.scss */
+div.user {
+  background-color: #3498db;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 408, ../sass/style.scss */
+div.user img.ava {
+  width: 10%;
+}
+/* line 411, ../sass/style.scss */
+div.user h3 {
+  color: white;
+}
+
 /*
 * Media queries
 */
 @media (max-width: 896px) {
-  /* line 409, ../sass/style.scss */
+  /* line 421, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
     display: none;
   }
 
-  /* line 413, ../sass/style.scss */
+  /* line 425, ../sass/style.scss */
   a.logo {
     margin-top: -20px;
   }
 
-  /* line 416, ../sass/style.scss */
+  /* line 428, ../sass/style.scss */
   nav.main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 419, ../sass/style.scss */
+  /* line 431, ../sass/style.scss */
   nav.main a.nvb-collapse {
     visibility: visible;
     position: absolute;
@@ -540,44 +556,44 @@ nav.warning h4 {
     top: 20px;
   }
 
-  /* line 427, ../sass/style.scss */
+  /* line 439, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 }
 @media (max-width: 600px) {
-  /* line 433, ../sass/style.scss */
+  /* line 445, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
   }
 
-  /* line 436, ../sass/style.scss */
+  /* line 448, ../sass/style.scss */
   a.logo {
     margin-top: -20px;
   }
 
-  /* line 439, ../sass/style.scss */
+  /* line 451, ../sass/style.scss */
   nav.main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 442, ../sass/style.scss */
+  /* line 454, ../sass/style.scss */
   nav.main a.nvb-collapse {
     visibility: visible;
   }
 
-  /* line 447, ../sass/style.scss */
+  /* line 459, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 }
 @media (max-width: 1320px) {
-  /* line 454, ../sass/style.scss */
+  /* line 466, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 
-  /* line 458, ../sass/style.scss */
+  /* line 470, ../sass/style.scss */
   a.logo {
     margin-top: -20px;
   }
