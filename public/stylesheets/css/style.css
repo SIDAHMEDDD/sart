@@ -500,27 +500,39 @@ div.about div.developers div.developer a:hover {
   color: #ecf0f1;
 }
 
+/* line 394, ../sass/style.scss */
+nav.warning {
+  background-color: #c0392b;
+  margin: 0;
+  padding: 10px 0 10px 0;
+}
+/* line 398, ../sass/style.scss */
+nav.warning h4 {
+  color: white;
+  margin-left: 20px;
+}
+
 /*
 * Media queries
 */
 @media (max-width: 896px) {
-  /* line 400, ../sass/style.scss */
+  /* line 409, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
     display: none;
   }
 
-  /* line 404, ../sass/style.scss */
+  /* line 413, ../sass/style.scss */
   a.logo {
     margin-top: -20px;
   }
 
-  /* line 407, ../sass/style.scss */
+  /* line 416, ../sass/style.scss */
   nav.main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 410, ../sass/style.scss */
+  /* line 419, ../sass/style.scss */
   nav.main a.nvb-collapse {
     visibility: visible;
     position: absolute;
@@ -528,44 +540,44 @@ div.about div.developers div.developer a:hover {
     top: 20px;
   }
 
-  /* line 418, ../sass/style.scss */
+  /* line 427, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 }
 @media (max-width: 600px) {
-  /* line 424, ../sass/style.scss */
+  /* line 433, ../sass/style.scss */
   a.m-item {
     visibility: hidden;
   }
 
-  /* line 427, ../sass/style.scss */
+  /* line 436, ../sass/style.scss */
   a.logo {
     margin-top: -20px;
   }
 
-  /* line 430, ../sass/style.scss */
+  /* line 439, ../sass/style.scss */
   nav.main {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 433, ../sass/style.scss */
+  /* line 442, ../sass/style.scss */
   nav.main a.nvb-collapse {
     visibility: visible;
   }
 
-  /* line 438, ../sass/style.scss */
+  /* line 447, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 }
 @media (max-width: 1320px) {
-  /* line 445, ../sass/style.scss */
+  /* line 454, ../sass/style.scss */
   nav.cat a {
     display: block;
   }
 
-  /* line 449, ../sass/style.scss */
+  /* line 458, ../sass/style.scss */
   a.logo {
     margin-top: -20px;
   }

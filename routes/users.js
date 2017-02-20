@@ -37,10 +37,10 @@ passport.use(new LocalStrategy(
    })
   }))
 
-router.get('/login', function(req, res, next){
+router.get('/login', authentication.ensureLoggedin, function(req, res, next){
   res.render('login', { title: 'Login', layout: 'login'});
 });
-router.get('/register', function(req, res, next){
+router.get('/register', authentication.ensureLoggedin, function(req, res, next){
   res.render('register', { title: 'Register', layout: 'register'});
 });
 router.post('/createuser', (req, res) => {

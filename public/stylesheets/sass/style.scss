@@ -391,6 +391,15 @@ div.about{
     }
   }
 }
+nav.warning{
+  background-color: #c0392b;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  h4{
+    color: white;
+    margin-left: 20px;
+  }
+}
 
 /*
 * Media queries

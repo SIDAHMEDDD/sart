@@ -18,6 +18,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var inside = require('./routes/inside');
 var adminDashboard = require('./routes/adminDashboard');
+var templates = require('./routes/templates');
 
 var app = express();
 
@@ -64,6 +65,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/section', inside);
 app.use('/dashboard', adminDashboard);
+app.use('/templates', templates);
 
 
 // error handler

@@ -1,11 +1,19 @@
-/* line 3, ../sass/dashboard.scss */
+/* line 2, ../sass/dashboard.scss */
+* {
+  outline: none !important;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 8, ../sass/dashboard.scss */
 body {
   background-color: #ecf0f1;
   margin: auto;
   overflow-x: hidden;
 }
 
-/* line 9, ../sass/dashboard.scss */
+/* line 14, ../sass/dashboard.scss */
 nav {
   height: 100%;
   position: fixed;
@@ -21,12 +29,12 @@ nav {
   padding-right: 0px;
   padding-left: 0px;
 }
-/* line 23, ../sass/dashboard.scss */
+/* line 28, ../sass/dashboard.scss */
 nav h5 {
   color: #bdc3c7;
   margin-left: 10px;
 }
-/* line 27, ../sass/dashboard.scss */
+/* line 32, ../sass/dashboard.scss */
 nav a {
   padding: 20px 100px 20px 20px;
   text-decoration: none;
@@ -34,126 +42,355 @@ nav a {
   display: block;
   transition: 0.3s;
 }
-/* line 33, ../sass/dashboard.scss */
+/* line 38, ../sass/dashboard.scss */
 nav a:hover {
   background-color: #ecf0f1;
 }
-/* line 37, ../sass/dashboard.scss */
+/* line 42, ../sass/dashboard.scss */
 nav a.active {
   background-color: #ecf0f1;
   color: #1abc9c;
   border-left: 3px solid #1abc9c;
 }
-/* line 42, ../sass/dashboard.scss */
+/* line 47, ../sass/dashboard.scss */
 nav a#last {
   margin-bottom: 100px;
 }
-/* line 45, ../sass/dashboard.scss */
+/* line 50, ../sass/dashboard.scss */
 nav i {
   margin-right: 10px;
 }
 
 /* Let's get this party started */
-/* line 50, ../sass/dashboard.scss */
+/* line 55, ../sass/dashboard.scss */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 /* Track */
-/* line 55, ../sass/dashboard.scss */
+/* line 60, ../sass/dashboard.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Handle */
-/* line 60, ../sass/dashboard.scss */
+/* line 65, ../sass/dashboard.scss */
 ::-webkit-scrollbar-thumb {
   background: #bdc3c7;
 }
 
-/* line 63, ../sass/dashboard.scss */
+/* line 68, ../sass/dashboard.scss */
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(255, 0, 0, 0.4);
 }
 
 /**/
-/* line 70, ../sass/dashboard.scss */
+/* line 75, ../sass/dashboard.scss */
 scrollbar {
   width: 5px;
 }
 
 /* Track */
-/* line 75, ../sass/dashboard.scss */
+/* line 80, ../sass/dashboard.scss */
 scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Handle */
-/* line 80, ../sass/dashboard.scss */
+/* line 85, ../sass/dashboard.scss */
 scrollbar-thumb {
   background: #bdc3c7;
 }
 
-/* line 83, ../sass/dashboard.scss */
+/* line 88, ../sass/dashboard.scss */
 scrollbar-thumb:window-inactive {
   background: rgba(255, 0, 0, 0.4);
 }
 
 /**/
-/* line 89, ../sass/dashboard.scss */
+/* line 94, ../sass/dashboard.scss */
 ::-moz-scrollbar {
   width: 5px;
 }
 
 /* Track */
-/* line 94, ../sass/dashboard.scss */
+/* line 99, ../sass/dashboard.scss */
 ::-moz-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Handle */
-/* line 99, ../sass/dashboard.scss */
+/* line 104, ../sass/dashboard.scss */
 ::-moz-scrollbar-thumb {
   background: #bdc3c7;
 }
 
-/* line 102, ../sass/dashboard.scss */
+/* line 107, ../sass/dashboard.scss */
 ::-moz-scrollbar-thumb:window-inactive {
   background: rgba(255, 0, 0, 0.4);
 }
 
-/* line 105, ../sass/dashboard.scss */
+/* line 110, ../sass/dashboard.scss */
 div.dash-view {
   text-align: center;
   margin-top: 50px;
 }
-/* line 108, ../sass/dashboard.scss */
+/* line 113, ../sass/dashboard.scss */
 div.dash-view div.main {
   text-align: left;
-  margin-left: 32%;
+  margin-left: 28%;
 }
-/* line 111, ../sass/dashboard.scss */
+/* line 116, ../sass/dashboard.scss */
 div.dash-view div.main h5 {
   color: #2c3e50;
 }
-/* line 114, ../sass/dashboard.scss */
+/* line 119, ../sass/dashboard.scss */
 div.dash-view div.main h3 {
   color: #95a5a6;
 }
+/* line 122, ../sass/dashboard.scss */
+div.dash-view div.main div.stat {
+  background-color: white;
+  display: inline-block;
+  padding: 20px 25px 20px 25px;
+  margin-bottom: 20px;
+}
+/* line 127, ../sass/dashboard.scss */
+div.dash-view div.main div.stat h4 {
+  color: #2c3e50;
+  display: inline-block;
+}
+/* line 131, ../sass/dashboard.scss */
+div.dash-view div.main div.stat h5 {
+  color: #95a5a6;
+  display: inline-block;
+}
+/* line 135, ../sass/dashboard.scss */
+div.dash-view div.main div.stat i.money {
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  border: 1px solid #3498db;
+  border-radius: 50%;
+  padding: 20px 22px 20px 22px;
+  margin-right: 15px;
+  display: inline-block;
+}
+/* line 144, ../sass/dashboard.scss */
+div.dash-view div.main div.stat i.sales {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 50%;
+  padding: 20px 21px 20px 21px;
+  margin-right: 15px;
+  display: inline-block;
+}
+/* line 153, ../sass/dashboard.scss */
+div.dash-view div.main div.stat i.visits {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  border: 1px solid #2ecc71;
+  border-radius: 50%;
+  padding: 20px 22px 20px 22px;
+  margin-right: 15px;
+  display: inline-block;
+}
+/* line 164, ../sass/dashboard.scss */
+div.dash-view div.clients {
+  text-align: left;
+  margin-left: 28%;
+}
+/* line 167, ../sass/dashboard.scss */
+div.dash-view div.clients h5 {
+  color: #2c3e50;
+}
+/* line 170, ../sass/dashboard.scss */
+div.dash-view div.clients h3 {
+  color: #95a5a6;
+}
+/* line 173, ../sass/dashboard.scss */
+div.dash-view div.clients div.active-users {
+  background-color: white;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 0px 0px 20px 0px;
+}
+/* line 178, ../sass/dashboard.scss */
+div.dash-view div.clients div.active-users h4 {
+  background-color: #1abc9c;
+  color: #ecf0f1;
+  margin: 0;
+  padding: 5px 100px 5px 20px;
+}
+/* line 185, ../sass/dashboard.scss */
+div.dash-view div.clients table {
+  border: none !important;
+}
+/* line 188, ../sass/dashboard.scss */
+div.dash-view div.clients table tr th {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: white;
+  padding: 10px 10px 10px 10px;
+}
+/* line 194, ../sass/dashboard.scss */
+div.dash-view div.clients table tr td {
+  padding: 25px 10px 10px 10px;
+}
+/* line 196, ../sass/dashboard.scss */
+div.dash-view div.clients table tr td a.suspend {
+  color: #2c3e50;
+  border: 1px solid #1abc9c;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+/* line 201, ../sass/dashboard.scss */
+div.dash-view div.clients table tr td a.suspend:hover {
+  color: white;
+  background-color: #1abc9c;
+}
+/* line 206, ../sass/dashboard.scss */
+div.dash-view div.clients table tr td a.remove {
+  color: #2c3e50;
+  border: 1px solid #e67e22;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+/* line 211, ../sass/dashboard.scss */
+div.dash-view div.clients table tr td a.remove:hover {
+  color: white;
+  background-color: #e67e22;
+}
+/* line 221, ../sass/dashboard.scss */
+div.dash-view div.products {
+  text-align: left;
+  margin-left: 28%;
+}
+/* line 224, ../sass/dashboard.scss */
+div.dash-view div.products h5 {
+  color: #2c3e50;
+}
+/* line 227, ../sass/dashboard.scss */
+div.dash-view div.products h3 {
+  color: #95a5a6;
+}
+/* line 230, ../sass/dashboard.scss */
+div.dash-view div.products div.productss {
+  background-color: white;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 0px 0px 20px 0px;
+}
+/* line 235, ../sass/dashboard.scss */
+div.dash-view div.products div.productss h4 {
+  background-color: #1abc9c;
+  color: #ecf0f1;
+  margin: 0;
+  padding: 5px 100px 5px 20px;
+}
+/* line 242, ../sass/dashboard.scss */
+div.dash-view div.products table {
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  border: none !important;
+}
+/* line 247, ../sass/dashboard.scss */
+div.dash-view div.products table tr th {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: white;
+  padding: 10px 10px 10px 10px;
+}
+/* line 253, ../sass/dashboard.scss */
+div.dash-view div.products table tr td {
+  padding: 25px 10px 10px 10px;
+}
+/* line 255, ../sass/dashboard.scss */
+div.dash-view div.products table tr td a.suspend {
+  color: #2c3e50;
+  border: 1px solid #1abc9c;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+/* line 260, ../sass/dashboard.scss */
+div.dash-view div.products table tr td a.suspend:hover {
+  color: white;
+  background-color: #1abc9c;
+}
+/* line 265, ../sass/dashboard.scss */
+div.dash-view div.products table tr td a.remove {
+  color: #2c3e50;
+  border: 1px solid #e67e22;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+/* line 270, ../sass/dashboard.scss */
+div.dash-view div.products table tr td a.remove:hover {
+  color: white;
+  background-color: #e67e22;
+}
+/* line 279, ../sass/dashboard.scss */
+div.dash-view form {
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-right: 50px;
+  padding: 50px 20px 50px 50px;
+}
+/* line 287, ../sass/dashboard.scss */
+div.dash-view form input {
+  background-color: #ecf0f1;
+  width: 90%;
+  display: block;
+  padding: 15px 10px 15px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+/* line 296, ../sass/dashboard.scss */
+div.dash-view form button {
+  color: white;
+  background-color: #2980b9;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  padding: 13px 86px 10px 86px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 306, ../sass/dashboard.scss */
+div.dash-view form button:hover {
+  cursor: pointer;
+  background-color: #3498db;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 312, ../sass/dashboard.scss */
+div.dash-view form i {
+  margin-right: 5px;
+}
 
 @media (max-width: 700px) {
-  /* line 120, ../sass/dashboard.scss */
+  /* line 318, ../sass/dashboard.scss */
   nav {
     padding-top: 20px;
     padding-bottom: 100px;
     padding-right: 0px;
     padding-left: 0px;
   }
-  /* line 125, ../sass/dashboard.scss */
+  /* line 323, ../sass/dashboard.scss */
   nav a {
     padding: 20px 20px 20px 20px;
   }
-  /* line 127, ../sass/dashboard.scss */
+  /* line 325, ../sass/dashboard.scss */
   nav a i.text {
     display: none;
     visibility: hidden;
