@@ -38,8 +38,8 @@ app.engine("hbs", exphbs(
   {
     defaultLayout: "layout",
     extname: ".hbs",
-    helpers: require("./public/javascripts/helpers.js").helpers, // same file that gets used on our client
-    partialsDir: "views/partials/", // same as default, I just like to be explicit
+    helpers: require("./public/javascripts/helpers.js").helpers,
+    partialsDir: "views/partials/",
   }
 ));
 app.set('view engine', 'hbs');
