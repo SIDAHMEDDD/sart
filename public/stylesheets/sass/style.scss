@@ -412,6 +412,38 @@ div.user{
     color: white;
   }
 }
+form.search{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  input{
+    color: #2c3e50;
+    display: inline-block;
+    padding: 8px 100px 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+  }
+  button{
+    background-color: #1abc9c;
+    color: white;
+    margin: 0;
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 30px 14px 30px;
+    @include transition-duration(0.5s);
+    &:hover{
+      background-color: #16a085;
+      cursor: pointer;
+      @include transition-duration(0.5s);
+    }
+  }
+}
+nav.m{
+  a{
+    display: inline-block;
+  }
+}
 
 /*
 * Media queries

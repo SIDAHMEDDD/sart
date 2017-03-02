@@ -1,5 +1,8 @@
 <div class="user">
-  <img src="/images/avatar.png" class="ava" alt="">
+  <form class="search" action="/search" method="post">
+    <input type="text" name="" placeholder="Search for templates">
+    <button type="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+  </form>
   <h3>Welcome {{user.username}}</h3>
   <h3>{{currentDate}}</h3>
 </div>
