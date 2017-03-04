@@ -1,7 +1,8 @@
 @import 'compass/css3';
 
 body{
-  background-color: #3498db;
+  font-family: 'Sansita', sans-serif;
+  background-color: #e74c3c;
   margin: auto;
   text-align: center;
   overflow-x: hidden;
@@ -34,18 +35,20 @@ form.login{
   }
   h1{
     color: #95a5a6;
+    font-family: 'Gloria Hallelujah', cursive;
   }
   input{
+    font-family: 'Sansita', sans-serif;
     background-color: #ecf0f1;
     display: block;
-    padding: 15px 10px 15px 30px;
+    padding: 15px 10px 15px 58px;
     border: none;
     border-radius: 5px;
     margin-bottom: 5px;
   }
   button{
     color: white;
-    background-color: #2980b9;
+    background-color: #c0392b;
     display: block;
     border: none;
     border-radius: 5px;
@@ -54,7 +57,7 @@ form.login{
     @include transition-duration(0.5s);
     &:hover{
       cursor: pointer;
-      background-color: #3498db;
+      background-color: #e74c3c;
       @include transition-duration(0.5s);
     }
   }

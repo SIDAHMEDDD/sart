@@ -1,7 +1,3 @@
-{{#if user}}
-{{else}}
-  <nav class="warning"><h4>Warning: You must login before you can buy templates</h4></nav>
-{{/if}}
 <nav class="cat">
   <a href="/templates/wordpress">Wordpress themes</a>
   <a href="/templates/websites">Website templates</a>
@@ -10,12 +6,51 @@
   <a href="/templates/covers">Facebook/Youtube covers</a>
   <a href="/templates/bootstrapthemes">Bootstrap themes</a>
 </nav>
+{{#if user}}
+{{else}}
+  <nav class="warning"><h4>Warning: You must login before you can buy templates</h4></nav>
+{{/if}}
 <div class="list">
   <h2>Recently Added Templates And Themes</h2>
 </div>
-<div class="templates">
-  {{#each templates}}
-    <div class="template">
+{{#if user}}
+  {{#ifCond user.userType "Normal"}}
+      <div class="templates">
+        {{#each templates}}
+          <div class="template">
+              <h5 class="category">{{this.category}}</h5>
+              <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+              <a class="name" href="">{{this.name}}</a>
+              <h3 class="rank">{{this.downloadRank}} Downloads</h3>
+              <a class="download dp" href={{this.downloadLink}}>View Details</a>
+              {{#ifCond this.price 0}}
+                <a class="preview dp" href={{this.downloadLink}}>Download</a>
+              {{else}}
+                <a class="preview dp" href="#">Add To Cart</a>
+              {{/ifCond}}
+              <h3 class="pricee">{{this.price}}$</h3>
+          </div>
+        {{/each}}
+      </div>
+  {{else}}
+      <div class="templates">
+        {{#each templates}}
+          <div class="template">
+              <h5 class="category">{{this.category}}</h5>
+              <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+              <a class="name" href="">{{this.name}}</a>
+              <h3 class="rank">{{this.downloadRank}} Downloads</h3>
+              <a class="download dp" href={{this.downloadLink}}>View Details</a>
+                <a class="preview dp" href={{this.downloadLink}}>Download</a>
+              <h3 class="pricee">{{this.price}}$</h3>
+          </div>
+        {{/each}}
+      </div>
+  {{/ifCond}}
+{{else}}
+  <div class="templates">
+    {{#each templates}}
+      <div class="template">
         <h5 class="category">{{this.category}}</h5>
         <img alt={{this.pictureLink}} src={{this.pictureLink}} />
         <a class="name" href="">{{this.name}}</a>
@@ -27,6 +62,7 @@
           <a class="preview dp" href="#">Add To Cart</a>
         {{/ifCond}}
         <h3 class="pricee">{{this.price}}$</h3>
-    </div>
-  {{/each}}
-</div>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}

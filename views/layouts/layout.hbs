@@ -3,36 +3,32 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/css/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Sansita" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript" src="/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/behaviors.js"></script>
   </head>
   <body>
-    <nav class="m">
-      <a href="#">Sart</a>
-      <form class="search" action="/search" method="post">
-        <input type="text" name="" placeholder="Search for templates">
-      </form>
-    </nav>
     <nav class="main">
       {{#if user}}
-        <a href="/" class="logo">SART</a>
+        <a href="/" class="logo">WISTIA</a>
+        <a href="/users/logout" class="item">Logout</a>
+        <a href="/about" class="item {{class4}}">About</a>
+        <a href="/templates" class="item {{class3}}">Templates</a>
         {{#ifCond user.userType  "Normal"}}
-          <a href="/" class="m-item {{class1}}">Home</a>
+          <a href="/" class="item {{class1}}">Home</a>
         {{else}}
-          <a href="/dashboard/main" class="m-item {{class1}}">Dashboard</a>
+          <a href="/dashboard/main" class="item">Dashboard</a>
         {{/ifCond}}
-        <a href="/templates" class="m-item {{class3}}">Templates</a>
-        <a href="/about" class="m-item {{class4}}">About</a>
-        <a href="/users/logout" class="right m-item">Logout</a>
       {{else}}
-        <a href="/" class="logo">SART</a>
-        <a href="/" class="m-item {{class1}}">Overview</a>
-        <a href="/templates" class="m-item {{class3}}">Templates</a>
-        <a href="/about" class="m-item {{class4}}">About</a>
-        <a href="/users/login" class="right m-item lin">Log in</a>
-        <a href="/users/register" class="right m-item lin">Sign up</a>
+        <a href="/" class="logo">WISTIA</a>
+        <a href="/users/login" class="item">Log in</a>
+        <a href="/users/register" class="item">Sign up</a>
+        <a href="/about" class="item {{class4}}">About</a>
+        <a href="/templates" class="item {{class3}}">Templates</a>
+        <a href="/" class="item {{class1}}">Overview</a>
       {{/if}}
       <a href="#" class="nvb-collapse right"><i class="fa fa-bars" aria-hidden="true"></i></a>
     </nav>

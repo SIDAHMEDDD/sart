@@ -30,6 +30,8 @@ var inside          = require('./routes/inside');
 var adminDashboard  = require('./routes/adminDashboard');
 var templates       = require('./routes/templates');
 
+var count=0;
+
 var databaseConfig = require('./config/database');
 var app = express();
 
@@ -61,7 +63,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(function(req, res, next) {
   res.locals.user = req.user || null
-
+  count++;
   next();
 });
 
