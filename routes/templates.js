@@ -3,6 +3,7 @@ var router          = express.Router();
 var authentication  = require('../lib/userLib.js');
 var User            = require('../models/user');
 var Template        = require('../models/template');
+var Cart            = require('../models/cart');
 
 router.get('/', function(req, res, next){
   Template.find({}, function(err, docs){
@@ -16,7 +17,7 @@ router.get('/', function(req, res, next){
   })
 });
 router.get('/wordpress', function(req, res, next){
-  Template.find({category: "wordpress"}, function(err, docs){
+  Template.find({category: "Wordpress Theme"}, function(err, docs){
     res.render('templates/wordpress',
       {
         title: 'Wordpress themes',
@@ -27,7 +28,7 @@ router.get('/wordpress', function(req, res, next){
   })
 });
 router.get('/blogger', function(req, res, next){
-  Template.find({category: "blogger"}, function(err, docs){
+  Template.find({category: "Blogger Template"}, function(err, docs){
     res.render('templates/blogger',
       {
         title: 'Blogger templates',
@@ -38,7 +39,7 @@ router.get('/blogger', function(req, res, next){
   })
 });
 router.get('/websites', function(req, res, next){
-  Template.find({category: "websites"}, function(err, docs){
+  Template.find({category: "Website Template"}, function(err, docs){
     res.render('templates/websites',
      {
        title: 'Website templates',
@@ -49,7 +50,7 @@ router.get('/websites', function(req, res, next){
   })
 });
 router.get('/joomla', function(req, res, next){
-  Template.find({category: ""}, function(err, docs){
+  Template.find({category: "Joomla Template"}, function(err, docs){
     res.render('templates/joomla',
      {
        title: 'Joomla templates',
@@ -60,7 +61,7 @@ router.get('/joomla', function(req, res, next){
   })
 });
 router.get('/covers', function(req, res, next){
-  Template.find({category: "covers"}, function(err, docs){
+  Template.find({category: "Cover"}, function(err, docs){
     res.render('templates/fbyt',
      {
        title: 'Facebook and youtube covers',
@@ -71,7 +72,7 @@ router.get('/covers', function(req, res, next){
   })
 });
 router.get('/bootstrapthemes', function(req, res, next){
-  Template.find({category: "bootstrap"}, function(err, docs){
+  Template.find({ category : "Bootstrap Theme" }, function(err, docs){
     res.render('templates/bootstrap',
       {
         title: 'Bootstrap themes',
@@ -80,6 +81,20 @@ router.get('/bootstrapthemes', function(req, res, next){
       }
     );
   })
+});
+router.get('/view/:id', function(req, res, next){
+  var id = req.params.id
+  Template.findById(id, function(err, docs){
+    Template.find({ category: docs.category }, function(err, related){
+      res.render('templates/view',
+        {
+          title: docs.name,
+          template: docs,
+          related: related
+        }
+      );
+    }).limit(3);
+  });
 });
 
 module.exports = router;

@@ -15,16 +15,19 @@ form.login {
   border-radius: 8px;
   margin-top: 10%;
   margin-bottom: 10%;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 100px 50px 100px;
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
-/* line 18, ../sass/register.scss */
+/* line 19, ../sass/register.scss */
 form.login a {
   color: #95a5a6;
   text-decoration: none;
   font-size: 0.8em;
   margin-right: 10px;
 }
-/* line 23, ../sass/register.scss */
+/* line 24, ../sass/register.scss */
 form.login a:hover {
   color: #7f8c8d;
   -moz-transition-duration: 0.5s;
@@ -32,46 +35,46 @@ form.login a:hover {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 28, ../sass/register.scss */
+/* line 29, ../sass/register.scss */
 form.login a.back {
   display: block;
   padding-bottom: 20px;
 }
-/* line 32, ../sass/register.scss */
+/* line 33, ../sass/register.scss */
 form.login img {
   width: 10%;
   display: block;
 }
-/* line 36, ../sass/register.scss */
+/* line 37, ../sass/register.scss */
 form.login h1 {
   color: #95a5a6;
   font-family: 'Gloria Hallelujah', cursive;
 }
-/* line 40, ../sass/register.scss */
+/* line 41, ../sass/register.scss */
 form.login input {
   font-family: 'Sansita', sans-serif;
   background-color: #ecf0f1;
   display: block;
-  padding: 15px 10px 15px 58px;
+  padding: 15px 100px 15px 20px;
   border: none;
   border-radius: 5px;
   margin-bottom: 5px;
 }
-/* line 49, ../sass/register.scss */
+/* line 50, ../sass/register.scss */
 form.login button {
   color: white;
   background-color: #c0392b;
   display: block;
   border: none;
   border-radius: 5px;
-  padding: 13px 79px 10px 79px;
+  padding: 13px 105px 10px 105px;
   margin-bottom: 20px;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 58, ../sass/register.scss */
+/* line 59, ../sass/register.scss */
 form.login button:hover {
   cursor: pointer;
   background-color: #e74c3c;
@@ -80,14 +83,14 @@ form.login button:hover {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 64, ../sass/register.scss */
+/* line 65, ../sass/register.scss */
 form.login i {
   color: white;
   margin-bottom: 50px;
 }
 
 @media (max-width: 700px) {
-  /* line 70, ../sass/register.scss */
+  /* line 71, ../sass/register.scss */
   form.login {
     padding: 15px 15px 15px 15px;
   }

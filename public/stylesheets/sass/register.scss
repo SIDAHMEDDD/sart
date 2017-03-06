@@ -14,7 +14,8 @@ form.login{
   border-radius: 8px;
   margin-top: 10%;
   margin-bottom: 10%;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 100px 50px 100px;
+  @include box-shadow(0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24));
   a{
     color: #95a5a6;
     text-decoration: none;
@@ -41,7 +42,7 @@ form.login{
     font-family: 'Sansita', sans-serif;
     background-color: #ecf0f1;
     display: block;
-    padding: 15px 10px 15px 58px;
+    padding: 15px 100px 15px 20px;
     border: none;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -52,7 +53,7 @@ form.login{
     display: block;
     border: none;
     border-radius: 5px;
-    padding: 13px 79px 10px 79px;
+    padding: 13px 105px 10px 105px;
     margin-bottom: 20px;
     @include transition-duration(0.5s);
     &:hover{

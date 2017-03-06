@@ -24,6 +24,24 @@ var TemplateSchema = mongoose.Schema({
   },
   price: {
     type: Number
+  },
+  language: {
+    type: String
+  },
+  features: {
+    type: String
+  },
+  software: {
+    type: String
+  },
+  Temptype: {
+    type: String
+  },
+  tag: {
+    type: String
+  },
+  planguages: {
+    type: String
   }
 });
 
