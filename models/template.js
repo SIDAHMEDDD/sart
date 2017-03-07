@@ -22,9 +22,6 @@ var TemplateSchema = mongoose.Schema({
   previewLink: {
     type: String
   },
-  price: {
-    type: Number
-  },
   language: {
     type: String
   },

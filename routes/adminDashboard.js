@@ -60,5 +60,12 @@ router.get('/layout', authentication.ensureAuthenticated_admin,
               function(req, res){
   res.render('dashboard/wlayout', { title: 'Layout', class10: 'active', layout: 'dashboard'})
 })
+router.post('/upload', authentication.ensureAuthenticated_admin,
+              authentication.ensureAdmin,
+              function(req, res){
+  var name = req.body.name;
+  console.log(name);
+  res.render('dashboard/upload', { title: 'Upload', class9: 'active', layout: 'dashboard'})
+})
 
 module.exports = router;
