@@ -1,11 +1,9 @@
 var express         = require('express');
 var router          = express.Router();
-var authentication  = require('../lib/userLib.js');
 var User            = require('../models/user');
 var Template        = require('../models/template');
-var Cart            = require('../models/cart');
 
-router.get('/', function(req, res, next){
+router.get('/', function(req, res){
   Template.find({}, function(err, docs){
     res.render('templates/main',
      {
@@ -14,9 +12,9 @@ router.get('/', function(req, res, next){
        templates: docs
      }
     );
-  })
+  });
 });
-router.get('/wordpress', function(req, res, next){
+router.get('/wordpress', function(req, res){
   Template.find({category: "Wordpress Theme"}, function(err, docs){
     res.render('templates/wordpress',
       {
@@ -25,9 +23,9 @@ router.get('/wordpress', function(req, res, next){
         templates: docs
       }
     );
-  })
+  });
 });
-router.get('/blogger', function(req, res, next){
+router.get('/blogger', function(req, res){
   Template.find({category: "Blogger Template"}, function(err, docs){
     res.render('templates/blogger',
       {
@@ -36,9 +34,9 @@ router.get('/blogger', function(req, res, next){
         templates: docs
       }
     );
-  })
+  });
 });
-router.get('/websites', function(req, res, next){
+router.get('/websites', function(req, res){
   Template.find({category: "Website Template"}, function(err, docs){
     res.render('templates/websites',
      {
@@ -47,9 +45,9 @@ router.get('/websites', function(req, res, next){
        templates: docs
      }
     );
-  })
+  });
 });
-router.get('/joomla', function(req, res, next){
+router.get('/joomla', function(req, res){
   Template.find({category: "Joomla Template"}, function(err, docs){
     res.render('templates/joomla',
      {
@@ -58,9 +56,9 @@ router.get('/joomla', function(req, res, next){
        templates: docs
      }
     );
-  })
+  });
 });
-router.get('/covers', function(req, res, next){
+router.get('/covers', function(req, res){
   Template.find({category: "Cover"}, function(err, docs){
     res.render('templates/fbyt',
      {
@@ -69,9 +67,9 @@ router.get('/covers', function(req, res, next){
        templates: docs
      }
     );
-  })
+  });
 });
-router.get('/bootstrapthemes', function(req, res, next){
+router.get('/bootstrapthemes', function(req, res){
   Template.find({ category : "Bootstrap Theme" }, function(err, docs){
     res.render('templates/bootstrap',
       {
@@ -80,10 +78,10 @@ router.get('/bootstrapthemes', function(req, res, next){
         templates: docs
       }
     );
-  })
+  });
 });
-router.get('/view/:id', function(req, res, next){
-  var id = req.params.id
+router.get('/view/:id', function(req, res){
+  var id = req.params.id;
   Template.findById(id, function(err, docs){
     Template.find({ category: docs.category }, function(err, related){
       res.render('templates/view',

@@ -1,43 +1,26 @@
-var express           = require('express');
-var mongoose          = require('mongoose');
-var path              = require('path');
-var favicon           = require('serve-favicon');
-var expressValidator  = require('express-validator');
-var logger            = require('morgan');
-var cookieParser      = require('cookie-parser');
-var bodyParser        = require('body-parser');
-var session           = require('express-session');
-var MongoStore        = require('connect-mongo')(session);
-var exphbs            = require('express-handlebars');
+const express           = require('express');
+const mongoose          = require('mongoose');
+const path              = require('path');
+const favicon           = require('serve-favicon');
+const expressValidator  = require('express-validator');
+const logger            = require('morgan');
+const cookieParser      = require('cookie-parser');
+const bodyParser        = require('body-parser');
+const session           = require('express-session');
+const MongoStore        = require('connect-mongo')(session);
+const exphbs            = require('express-handlebars');
 
 const passport      = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
 
-var User      = require('./models/user');
-var Template  = require('./models/template');
-var Order     = require('./models/order');
-var Message   = require('./models/message');
-var Cart      = require('./models/cart');
+const index           = require('./routes/index');
+const users           = require('./routes/users');
+const inside          = require('./routes/inside');
+const adminDashboard  = require('./routes/adminDashboard');
+const templates       = require('./routes/templates');
 
-var userController     = require('./controllers/userController');
-var templateController = require('./controllers/templateController');
-var orderController    = require('./controllers/orderController');
-var messageController  = require('./controllers/messageController');
+const app = express();
 
-var authenticationCheck = require('./lib/userLib.js');
-var dateTime            = require('./lib/dateTime.js');
-var errHandler          = require('./lib/errors.js');
-
-var index           = require('./routes/index');
-var users           = require('./routes/users');
-var inside          = require('./routes/inside');
-var adminDashboard  = require('./routes/adminDashboard');
-var templates       = require('./routes/templates');
-
-var count=0;
-
-mongoose.connect('mongodb://sidahmed:11092000@ds151279.mlab.com:51279/sart');
-var app = express();
+require('./config/database.js');
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine("hbs", exphbs(
@@ -82,21 +65,21 @@ app.use('/templates', templates);
 
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
-    var namespace = param.split('.')
-    , root    = namespace.shift()
-    , formParam = root;
+    var namespace = param.split('.');
+    var root    = namespace.shift();
+    var formParam = root;
 
     while(namespace.length) {
-      formParam += '[' + namespace.shift() + ']'
+      formParam += '[' + namespace.shift() + ']';
     }
     return {
       param : formParam,
       msg   : msg,
       value : value
-    }
+    };
   }
 }));
-app.use(function(req, res, next){
+app.use(function(req, res){
   res.status(404);
 
   if (req.accepts('html')) {
