@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var controller = require('../controllers/userController');
 
 var UserSchema = mongoose.Schema({
 	username: {
